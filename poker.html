@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>斗地主</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			background-image: url('./images/16.jpg');
+			overflow: hidden;
+		}
+		li{
+			list-style: none;
+		}
+		.left{
+			width:20%;
+			height: 800px;
+			float: left;
+			/*background: red;*/
+		}
+		.mid{
+			width:60%;
+			height: 800px;
+			float: left;
+			/*background: blue;*/
+		}
+		.mid_top{
+			width: 100%;
+			height: 550px;
+			float: left;
+			/*background: #000;*/
+		}
+		.mid_end{
+			width: 100%;
+			height: 260px;
+			float: left;
+			/*background: #fff;*/
+		}
+		.right{
+			width:20%;
+			height: 800px;
+			float: right;
+			/*background: yellow;*/
+		}
+	
+		.all_poker{
+			width: 125px;
+			height: 175px;
+			margin: 100px auto 0px;
+			position: relative;
+			/*background: #fff;*/
+		}
+		.all_poker li{
+			position: absolute;
+		}
+		.temp_poker{
+			width: 125px;
+			height: 175px;
+			margin: 100px auto 0px;
+			position: relative;
+		}
+		.back {
+			width:125px;
+			height: 175px;
+			background: url('./images/14.png') -87px -225px;
+			position: absolute;
+			z-index: 100;
+		}
+		.play_1, .play_2, .play_3{
+			width:125px;
+			height: 175px;
+			margin: 20px auto 0px;
+			position: relative;
+		}
+		.play_1 .on{
+			top: -20px;
+		}
+		.play_1{
+			height: 100%;/* 175px */
+			left: -250px;
+			top: -300px;
+			transform: rotateZ(90deg);
+		}
+		.play_2 .on{
+			top: -20px;
+		}
+		.play_3{
+			height: 175px;
+			float: left;
+			left: 0px;
+			top: 300px;
+			right: 250px;
+		}
+		.play_3 .on{
+			left: -20px;
+		}
+		.play_3 li{
+			transform: rotateZ(-90deg);
+		}
+		.play_1 li,.play_2 li,.play_3 li{
+			position: absolute;
+		}
+		.get-boss{
+			display: none;
+		}
+		.left .get-boss{
+			top: -60%;
+			width: 60px;
+			left: 100%;
+			position: relative;
+		}
+		.mid .get-boss{
+			bottom: 80%;
+			left: 30%;
+			position: relative;
+		}
+		.right .get-boss{
+			top: -10%;
+			left: -80px;
+			width: 60px;
+			position: relative;
+		}
+	
+		.play-btn{
+			display: none;
+		}
+	
+	
+		.left .play-btn{
+			top: -60%;
+			width: 40px;
+			left: 100%;
+			position: relative;
+		}
+		.mid .play-btn{
+			bottom: 80%;
+			left: 30%;
+			position: relative;
+		}
+		.right .play-btn{
+			top: -10%;
+			left: -80px;
+			width: 40px;
+			position: relative;
+		}
+		</style>
+
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script src="js/public.js"></script>
+	<script type="text/javascript" src="./js/game.js"></script>
+</head>
+<body>
+<div class="left">
+	<ul class="play_1"></ul>
+	<div class="get-boss">
+		<button class="get">抢地主</button>
+		<button class="cancel">不抢</button>
+	</div>
+	<div class="play-btn">
+		<button class="play">出牌</button>
+		<button class="noplay">过牌</button>
+	</div>
+</div>
+<div class="mid">
+	<div class="mid_top">
+		<ul class="all_poker">
+			<!-- <li class="back"></li> -->
+		</ul>
+	</div>
+	<div class="mid_end">
+		<ul class="play_2">
+			<!-- <li style="width: 125px; height: 175px; background: url(./images/14.png) -162px -5px;"></li> -->
+		</ul>
+		<div class="get-boss">
+			<button class="get">抢地主</button>
+			<button class="cancel">不抢</button>
+		</div>
+		<div class="play-btn">
+			<button class="play">出牌</button>
+			<button class="noplay">过牌</button>
+		</div>
+	</div>
+</div>
+<div class="right">
+	<ul class="play_3"></ul>
+	<div class="get-boss">
+		<button class="get">抢地主</button>
+		<button class="cancel">不抢</button>
+	</div>
+	<div class="play-btn">
+		<button class="play">出牌</button>
+		<button class="noplay">过牌</button>
+	</div>
+</div>
+</body>
+</html>
